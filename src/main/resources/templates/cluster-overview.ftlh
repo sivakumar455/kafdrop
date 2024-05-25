@@ -97,6 +97,22 @@
             </tbody>
         </table>
     </div>
+    <div class="row" >
+        <div class="col-3"></div>
+        <div class="col-3" id="new-topic">
+            <#if topicCreateEnabled>
+                <a class="btn btn-outline-light" href="<@spring.url '/topic/create'/>">
+                    <i class="fa fa-plus"></i> New Topic
+                </a>
+            </#if>
+        </div>
+        <div class="col-3">
+            <a href="<@spring.url '/publish/ui'/>" class="btn btn-outline-light publish-button">
+                <i class="fa fa-plus"></i> Publish Payload
+            </a>
+        </div>
+        <div class="col-3"></div>
+    </div>
 
     <div id="topics">
         <h3><i class="fa fa-database"></i> Topics&nbsp;&nbsp;&nbsp;<a href="<@spring.url '/acl'/>"><i class="fa fa-lock"></i> ACLs</a></h3>
@@ -149,11 +165,6 @@
             </#list>
             </tbody>
         </table>
-        <#if topicCreateEnabled>
-            <a class="btn btn-outline-light" href="<@spring.url '/topic/create'/>">
-                <i class="fa fa-plus"></i> New
-            </a>
-        </#if>
     </div>
 </div>
 
